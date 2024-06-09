@@ -7,11 +7,14 @@ import subprocess
 import sys
 import tempfile
 from types import ModuleType
+import asyncio
 
 from homeassistant import __main__, const, setup
 from homeassistant.helpers import frame, signal
 from homeassistant.loader import Integration
 from homeassistant.util import package
+
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 if __name__ == "__main__":
     if "--runner" not in sys.argv:

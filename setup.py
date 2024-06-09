@@ -12,4 +12,5 @@ setup(
     ],
     packages=["hass_win"],
     package_data={"hass_win": ["*.dll"]},
+    scripts=['hass_win/__main__.py'],
 )

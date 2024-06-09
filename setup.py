@@ -12,4 +12,7 @@ setup(
     ],
     packages=["hass_win"],
     package_data={"hass_win": ["*.dll"]},
+	entry_points={
+        'console_scripts': ['hass_win = hass_win.main']
+	},
 )
